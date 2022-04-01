@@ -18,12 +18,24 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+#------------------------------------
+#------------------------------------
+#project gems
+#for authentication
+gem 'devise', '~> 4.8', '>= 4.8.1'
+# for handling data on controllers
+gem 'stimulus-rails', '~> 1.0', '>= 1.0.4'
+# for handling data on views
+gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
+#------------------------------------
+#------------------------------------
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -31,6 +43,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  #for environment variables
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  #for testing
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.1'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'shoulda-matchers', '~> 5.1'
 end
 
 group :development do
