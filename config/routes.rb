@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/home'
   get 'users/index'
   get 'users/search'
   #for users wiews
@@ -12,15 +13,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # handle the root path for users
-  devise_scope :user do
-    authenticated :user do
-      root 'users#index', as: :authenticated_root
-    end
-
-    unauthenticated :user do
-      root 'sessions#new', as: :unauthenticated_root
-    end
-  end
+  root 'welcome#home'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
