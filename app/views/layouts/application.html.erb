@@ -13,6 +13,11 @@
   <body>
     <head>
       <%= render 'layouts/partials/notifications' %>
+      <% if user_signed_in? %>
+        <%= render 'layouts/partials/header'%>
+      <% else %>
+        <%= render 'layouts/partials/header_guest'%>
+      <% end %>
     </head>
     <main class="container">
       <%=yield%>
