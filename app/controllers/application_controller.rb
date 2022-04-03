@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
     def after_sign_in_path_for(resource)
         if resource_name == :user
-            users_index_path(resource)
+            users_index_path()
         end
     end
 end
