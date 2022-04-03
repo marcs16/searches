@@ -12,14 +12,12 @@
 
   <body>
     <head>
-      <%= render 'layouts/partials/notifications' %>
       <% if user_signed_in? %>
         <%= render 'layouts/partials/header'%>
-      <% else %>
-        <%= render 'layouts/partials/header_guest'%>
       <% end %>
+      <%= render 'layouts/partials/notifications' %>
     </head>
-    <main class="container">
+    <main class="container-fluid">
       <%=yield%>
     </main>
   </body>

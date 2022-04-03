@@ -1,5 +1,11 @@
 <% if notice %>
-    <p class="notice"><%= notice %></p>
-<% elsif alert %>
-    <p class="alert"><%= alert %></p>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong><%= notice %></strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% elseif alert %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong><%= alert %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>   
 <% end %>

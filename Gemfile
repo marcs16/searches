@@ -33,7 +33,6 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # for handling data on controllers
 gem 'stimulus-rails', '~> 1.0', '>= 1.0.4'
 # for handling data on views
-gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
 #------------------------------------
 #------------------------------------
 
