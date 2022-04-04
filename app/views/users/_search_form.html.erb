@@ -1,0 +1,5 @@
+<%=  search_form_for @search, html: {class:"d-flex flex-column  justify-content-justify py-4 "} do |f|  %>
+  <h4>Search</h4> 
+  <%= f.search_field :name_matches_all, class:"form-control  col-md-2 py-2 ", input_html:{style:"border: 3px;"} %><br/>
+  <%= f.submit "Search", class:"btn btn-outline-primary " %>
+<% end %>

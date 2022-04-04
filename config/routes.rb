@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/home'
-  get 'users/index'
-  get 'users/search'
   #for users wiews
-  get '/index', to: 'users#index'
-  post '/search', to: 'users#search'
-  #handling the login
+  get 'users', to: 'users#index'
+  
+
   
   #devise routes
   devise_for :users, controllers: {
