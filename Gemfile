@@ -34,6 +34,9 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'stimulus-rails', '~> 1.0', '>= 1.0.4'
 # for searching
 gem 'ransack', '~> 3.0'
+#for environment variables
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+
 #------------------------------------
 #------------------------------------
 
@@ -43,8 +46,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  #for environment variables
-  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+
   #for testing
   gem 'rspec-rails', '~> 5.1', '>= 5.1.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
