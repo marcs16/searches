@@ -1,17 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Users", type: :request do
-  describe "GET /index" do
-    it "returns http success" do
-      get "/users/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
+  let(:current_user) { User.new(name: "Luis",email: "test@test.com", password: "password", password_confirmation: "password") }
 
-  describe "GET /search" do
-    it "returns http success" do
-      get "/users/search"
-      expect(response).to have_http_status(:success)
+  context "redirections when user not logged in" do
+    before {get  "/users"}  
+    it "redirects to users login when user not logged in" do
+      subject {response}
+      expect(response).to redirect_to(new_user_session_path)
     end
   end
 
