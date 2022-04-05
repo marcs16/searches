@@ -16,9 +16,7 @@
 #
 default: &default
   adapter: postgresql
-  host: <%= ENV['HOST'] %>
-  password: <%= ENV['PASSWORD'] %>
-  username: postgres
+  host: 192.168.1.114
   port: 5433
   encoding: unicode
 
@@ -29,6 +27,8 @@ default: &default
 development:
   <<: *default
   database: searches_development
+  password: Adl
+  username: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,6 +63,8 @@ development:
 test:
   <<: *default
   database: searches_test
+  password: Adl
+  username: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -86,6 +88,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
-  username: postgres
+  database: searches_production
+  username: searches
   password: <%= ENV['SEARCHES_DATABASE_PASSWORD'] %>
