@@ -3,10 +3,8 @@ Rails.application.routes.draw do
   #for users wiews
   get 'users', to: 'users#index'
   
-
-  
   #devise routes
-  devise_for :users, controllers: {
+  devise_for :users,only: [:sessions, :registrations ], controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
