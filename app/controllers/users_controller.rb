@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @search = User.ransack(params[:q])
-    @users = @search.result(distinct: true)
-    
+   
+    if params[:query].present?
+      @search = User.users_find_name(params[:query])
+      @users = @search.result(distinct: true)
+    else
+      @search = User.ransack("")
+      @users = User.all
+    end  
+
   end
 end
